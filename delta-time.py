@@ -13,7 +13,6 @@ def get_deltas(filename, max_session=0):
 		if "TCP" not in pkt:
 			continue
 		stream_id = int(pkt.tcp.stream)
-		print(pkt.tcp.stream, pkt.tcp.time_delta)
 		src = pkt.ip.src
 
 		sys.stdout.write("\rStream ID: {}".format(stream_id))
